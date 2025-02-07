@@ -1,4 +1,5 @@
 class Game:
+    total_games = 0 # Variavel de classe para contar o número total de jogos
     def __init__(self, nome="", anoLancamento=0, multiJogador=0, nota=0):
         self.nome = nome
         self.anoLancamento = anoLancamento
@@ -6,7 +7,7 @@ class Game:
         self.nota = nota
         self.totalAvaliacoes = 0
         self.numAvaliacoes = 0  # Renomeado de "avaliacao" para "numAvaliacoes"
-
+        Game.total_games += 1
 
     def __str__(self):
         return f"Game: {self.nome}, Ano lançamento: {self.anoLancamento}, Multijogador: {self.multijogador}, Nota Final: {self.nota}\n"
@@ -31,6 +32,7 @@ class Game:
 # Criando os objetos
 game1 = Game("Combat Arms", 2009, True, 9.5)
 game2 = Game("Counter-Strike", 2000, True, 9.5)
+game3 = Game("Warface", 2013, True, 9.0)
 
 # Chamando os métodos
 game1.ficha_tecnica()
@@ -42,3 +44,12 @@ game2.ficha_tecnica()
 game2.adicionar_avaliacao(5.0)
 game2.adicionar_avaliacao(6.0)
 game2.mediaAvaliacoes()
+
+game3.ficha_tecnica()
+game3.adicionar_avaliacao(5.0)
+game3.adicionar_avaliacao(6.0)
+game3.mediaAvaliacoes()
+
+
+# Exibindo um número total de jogos criados
+print(f"Total de jogos criados: {Game.total_games}")
