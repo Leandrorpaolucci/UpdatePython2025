@@ -4,17 +4,17 @@ import gradio as gr
 def cadastrar_candidato(nome, idade, sexo, setor, escolaridade, rua, numero, bairro, cep, cidade, estado):
     return f"""
     **📋 Dados Cadastrados:**  
-    - **Nome:** {nome}  
+    - **Nome:** {nome.title()}  
     - **Idade:** {idade}  
     - **Sexo:** {sexo}  
     - **Setor:** {setor}  
     - **Escolaridade:** {escolaridade}  
 
     **📍 Endereço:**  
-    - **Rua:** {rua}, Nº {numero}  
-    - **Bairro:** {bairro}  
+    - **Rua:** {rua.title()}, Nº {numero}  
+    - **Bairro:** {bairro.title()}  
     - **CEP:** {cep}  
-    - **Cidade:** {cidade} - {estado}  
+    - **Cidade:** {cidade.title()} - {estado.title()}  
     """
 
 # Interface do Gradio
@@ -27,23 +27,25 @@ interface = gr.Interface(
         # Campo para o nome
         gr.Textbox(label="Nome do Candidato"),  
 
-        # Campo para a idade
-        gr.Number(label="Idade", precision=0),               
+        # Campo para a idade com validação de 0 a 100
+        gr.Number(label="Idade", precision=0, minimum=0, maximum=100),               
 
         # Campo para Seleção do sexo
         gr.Radio(choices=["Masculino", "Feminino", "Outros"], label="Sexo"), 
 
         # Campo para seleção do setor
-        gr.Radio(choices=[
+        gr.Radio(choices=[ 
             "Vendas", "Cobrança", "RH", "Departamento Pessoal",
             "TI", "Pós-vendas", "Análise de Crédito", "Telefonia", "Manutenção"
         ], label="Setor da Vaga Desejada"),
 
         # Campo para seleção da escolaridade
-        gr.Radio(choices=[
+        gr.Radio(choices=[ 
             "Ensino Médio - Incompleto",
+            "Ensino Médio - Completo",
             "Cursando Superior",
-            "Curso Superior - Completo"
+            "Curso Superior - Completo",
+            "Outros",
         ], label="Escolaridade"),
 
         # Campos para endereço

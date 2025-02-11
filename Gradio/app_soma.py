@@ -1,16 +1,18 @@
-import gradio as g
+import gradio as gr
 
 def somar(x, y):
     return x + y
 
+print(somar(5, 6))
 
-iface = g.Interface(
+interface = gr.Interface(
     fn=somar,
-    inputs=["number", "number"],
+    inputs=["number", "number"]
     outputs="number",
-    title="Calculadora",
+    title="Calculadora de soma",
     description="Insira dois números para obter a soma",
-    theme="default"
+    theme="default",
 )
 
-iface.launch()
+
+interface.launch()
