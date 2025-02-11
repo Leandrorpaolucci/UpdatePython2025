@@ -1,0 +1,7 @@
+# Ignorar ambiente virtual
+Gradio/env/
+
+# Outras configurações para Python e Git
+*.pyc
+__pycache__/
+*.log
