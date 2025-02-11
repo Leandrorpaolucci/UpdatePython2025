@@ -1,0 +1,17 @@
+USE sakila;
+
+drop view vendas_por_cliente;
+
+
+CREATE OR REPLACE VIEW vendas_por_cliente AS
+SELECT
+	cus.customer_id AS 'ID',
+    cus.first_name AS 'Nome',
+    cus.last_name AS 'Sobrenome',
+    pay.amount 
+FROM customer cus
+JOIN payment pay
+	ON cus.customer_id = pay.payment_id
+ORDER BY pay.amount ASC;
+
+SELECT * FROM sakila.vendas_por_cliente;

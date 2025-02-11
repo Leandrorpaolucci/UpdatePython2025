@@ -1,0 +1,14 @@
+USE sakila;
+
+SELECT * FROM sakila.payment;
+
+SELECT 
+	MAX(amount) AS 'Maior Valor Vendido',
+	MIN(amount) AS 'Menor Valor Vendido',
+	AVG(amount) AS 'Média de Valores',
+    SUM(amount) AS 'Soma total de Vendas',
+    COUNT(amount) AS 'Quantidade de vendas desde o inicio'
+FROM payment
+WHERE staff_id = 2
+
+

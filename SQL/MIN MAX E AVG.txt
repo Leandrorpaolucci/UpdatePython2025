@@ -1,0 +1,6 @@
+USE sakila;
+
+SELECT * FROM sakila.payment;
+
+SELECT MAX(amount) AS 'Maior Valor Vendido', MIN(amount) AS 'Menor Valor Vendido', AVG(amount) AS 'Média de Valores'
+FROM payment;

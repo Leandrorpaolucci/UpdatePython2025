@@ -1,0 +1,4 @@
+SELECT * FROM sakila.payment;
+
+DELETE FROM payment
+WHERE payment_id = 16048;
