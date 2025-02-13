@@ -1,0 +1,17 @@
+Exercício 1: Extração de URLs
+
+Enunciado: Escreva uma função que recebe um texto e extrai todas as 
+URLs presentes. Considere que uma URL pode começar com "http://" ou "https://" 
+e deve incluir um domínio seguido por um sufixo (por exemplo, ".com", ".org").
+
+Exercício 2: Validação de Senhas
+
+Enunciado: Crie uma função que valide senhas. Uma senha é considerada válida 
+se tiver pelo menos 8 caracteres, pelo menos uma letra maiúscula, uma letra 
+minúscula e um número. Retorne True se a senha for válida e False caso contrário.
+
+Exercício 3: Contagem de Palavras
+
+Enunciado: Implemente uma função que conte o número de palavras em um texto. 
+Considere palavras como sequências de caracteres alfabéticos (ou alfanuméricos) 
+que são separadas por espaços em branco ou pontuação.
