@@ -1,0 +1,39 @@
+Regras Básicas de Expressões Regulares (Regex) no Python:
+Caracteres Especiais:
+
+.: Corresponde a qualquer caractere, exceto quebras de linha.
+^: Indica o início da string.
+$: Indica o final da string.
+[]: Corresponde a qualquer caractere dentro dos colchetes. Exemplo: [a-z] corresponde a qualquer letra minúscula.
+|: Operador de alternância. Exemplo: abc|def corresponde a "abc" ou "def".
+(): Agrupa expressões regulares. Exemplo: (abc)+ corresponde a uma ou mais repetições de "abc".
+Quantificadores:
+
+*: Corresponde a zero ou mais repetições do item anterior.
++: Corresponde a uma ou mais repetições do item anterior.
+?: Corresponde a zero ou uma repetição do item anterior.
+{n}: Corresponde exatamente a n repetições do item anterior.
+{n,}: Corresponde a n ou mais repetições do item anterior.
+{n,m}: Corresponde entre n e m repetições do item anterior.
+Classes de Caracteres:
+
+\d: Corresponde a qualquer dígito (equivalente a [0-9]).
+\D: Corresponde a qualquer caractere que não seja dígito.
+\w: Corresponde a qualquer caractere alfanumérico (letras, números e underscore).
+\W: Corresponde a qualquer caractere que não seja alfanumérico.
+\s: Corresponde a qualquer espaço em branco (espaços, tabulação, novas linhas, etc.).
+\S: Corresponde a qualquer caractere que não seja espaço em branco.
+Escapando Caracteres Especiais:
+
+Para corresponder a caracteres especiais (como ponto, parênteses, etc.), você precisa usar a barra invertida (\). Exemplo: para corresponder ao ponto literal, você usaria \..
+Âncoras:
+
+(?=...): Lookahead positivo (verifica se o padrão pode ser seguido por outra expressão).
+(?!...): Lookahead negativo (verifica se o padrão não pode ser seguido por outra expressão).
+(?<=...): Lookbehind positivo (verifica se o padrão é precedido por outra expressão).
+(?<!...): Lookbehind negativo (verifica se o padrão não é precedido por outra expressão).
+Modificadores (Flags):
+
+re.IGNORECASE (ou re.I): Torna a correspondência sem distinção de maiúsculas/minúsculas.
+re.MULTILINE (ou re.M): Faz com que ^ e $ correspondam ao início e fim de cada linha (não apenas da string inteira).
+re.DOTALL (ou re.S): Faz com que o ponto (.) corresponda a qualquer caractere, incluindo quebras de linha.

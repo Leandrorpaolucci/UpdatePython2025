@@ -1,21 +1,18 @@
-from test import my_decorator, uppercase_decorator, split_string
+from decorator import my_decorator, upper_case_decorator, split_string
 
 @my_decorator
 def my_function():
     print("Dentro da função")
-    
+
 my_function()
 
-@split_string
-@uppercase_decorator
+@upper_case_decorator
 def text():
-    return "Hello WOrld"
-
+    return "Olá mundo"
 print(text())
 
 @split_string
-@uppercase_decorator
 def example():
-    return "Aprendendo Python e criando decorators"
+    return "Aprendendo python e criando decorators"
 
 print(example())
