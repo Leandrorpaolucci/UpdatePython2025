@@ -1,0 +1,2 @@
+CREATE TABLE payment_bkp AS 
+SELECT * FROM payment;

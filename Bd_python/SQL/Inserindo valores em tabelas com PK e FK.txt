@@ -1,0 +1,15 @@
+use sakila;
+
+
+INSERT INTO country
+VALUES (DEFAULT, 'Ukraine', '2024-12-05 04:44:00');
+
+INSERT INTO city
+VALUES (DEFAULT, 'Kiev', last_insert_id(), '2024-12-05 04:44:00');
+
+
+SELECT 
+pais.country, pais.country_id,
+cidade.city, cidade.city_id
+FROM country pais
+JOIN city cidade ON pais.country_id = cidade.country_id;

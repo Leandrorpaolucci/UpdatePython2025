@@ -1,0 +1,8 @@
+SELECT 
+customer.customer_id AS "ID",
+customer.first_name AS "Primeiro Nome",
+customer.last_name AS "Sobrenome",
+payment.payment_id AS "ID pagamento",
+payment.amount AS "Valor Pago"
+FROM customer 
+JOIN payment ON customer.customer_id = payment.payment_id

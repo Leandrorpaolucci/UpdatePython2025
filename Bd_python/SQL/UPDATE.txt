@@ -1,0 +1,7 @@
+USE sakila;
+
+SELECT * FROM sakila.payment;
+
+UPDATE payment
+SET amount = 10.99
+WHERE payment_id = 2
